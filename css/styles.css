@@ -17,6 +17,8 @@
   --main-link-color: #212121;
   --main-contact-color: #757575;
   --main-adress-color: #ffffff;
+  --main-border-color: #ececec;
+  --second-border-color: #eeeeee;
 }
 
 p,
@@ -32,10 +34,6 @@ h6 {
 ul {
   margin: 0;
   padding-left: 0;
-}
-
-button {
-  cursor: pointer;
 }
 
 address {
@@ -63,8 +61,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-
-  outline: 2px solid red;
 }
 
 .pointer {
@@ -97,6 +93,23 @@ img {
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
+  border-bottom: 1px solid var(--main-border-color);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  margin-left: auto;
+  column-gap: 50px;
 }
 
 .header-logo,
@@ -110,6 +123,7 @@ img {
 
 .header-logo {
   color: var(--main-logo-color);
+  margin-right: 93px;
 }
 
 .header-logo-black {
@@ -182,6 +196,7 @@ img {
   margin-top: 30px;
   min-width: 216px;
   height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 10px 32px;
 }
@@ -200,8 +215,13 @@ img {
   margin-top: 10px;
 }
 
+.features-list {
+  display: flex;
+  gap: 30px;
+}
+
 .features-item {
-  border: solid 1px rebeccapurple;
+  width: calc((100% - 90px) / 4);
 }
 
 /* --------BUSINESS---------- */
@@ -218,6 +238,12 @@ img {
 
 .business-list {
   margin-top: 50px;
+  display: flex;
+  gap: 30px;
+}
+
+.business-item {
+  width: calc((100% - 60px) / 3);
 }
 
 /* --------TEAM---------- */
@@ -225,8 +251,15 @@ img {
   background-color: var(--third-bg-color);
 }
 
+.team-list {
+  display: flex;
+  margin-top: 50px;
+  gap: 30px;
+}
+
 .team-item {
   background-color: var(--main-bg-color);
+  width: calc((100% - 90px) / 4);
 }
 
 .team-title {
@@ -283,7 +316,7 @@ img {
   margin-top: 20px;
 }
 
-.footer-items {
+.footer-item:not(:first-child) {
   margin-top: 9px;
 }
 
@@ -304,6 +337,12 @@ img {
 
 /* -----------------------PORTFOLIO------------------------- */
 /* --------FILTER---------- */
+.filter-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+}
+
 .filter-btn {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -311,7 +350,11 @@ img {
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
+  background-color: var(--third-bg-color);
+  border-color: transparent;
+  border-radius: 4px;
   color: var(--secondbtn-text-color);
+  padding: 6px 22px;
 }
 
 .filter-btn:hover,
@@ -322,14 +365,21 @@ img {
 
 .filter-cards {
   margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .filter-wrap {
   padding: 20px 24px;
+  border-right: 1px solid var(--second-border-color);
+  border-bottom: 1px solid var(--second-border-color);
+  border-left: 1px solid var(--second-border-color);
 }
 
 .filter-item {
   background-color: var(--main-bg-color);
+  width: calc((100% - 60px) / 3);
 }
 
 .filter-title {
